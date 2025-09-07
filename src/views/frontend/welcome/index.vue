@@ -6,6 +6,16 @@ import img_banner_mobile from '@/assets/images/img_dashbord_couper_mobile.png'
 import image1_section_2 from '@/assets/images/img1_section2.png'
 import image2_section_2 from '@/assets/images/img2_section2.png'
 import image3_section_2 from '@/assets/images/img3_section2.png'
+
+// Images section 3
+import image1_section_3 from '@/assets/images/img1_section3.png'
+import icon1_section_3 from '@/assets/images/icon1_section3.png'
+import icon2_section_3 from '@/assets/images/icon2_section3.png'
+import icon3_section_3 from '@/assets/images/icon3_section3.png'
+
+import image_step1 from '@/assets/images/img_step1.png'
+import image_step2 from '@/assets/images/img_step2.png'
+import image_step3 from '@/assets/images/img_step3.png'
 </script>
 
 <template>
@@ -26,7 +36,7 @@ import image3_section_2 from '@/assets/images/img3_section2.png'
             Manage all your business expenses with our supafast app.
           </p>
 
-          <div class="flex flex-col md:flex-row justify-center items-center w-full md:space-x-6 space-y-12 md:space-y-0  w-full">
+          <div class="flex flex-col md:flex-row justify-center items-center md:space-x-6 space-y-12 md:space-y-0  w-full">
 
             <div>
               <a href="#" class=" text-sm bg-app-secondary w-full md:w-auto text-white rounded-full transition-all duration-500 ease-in-out px-6 py-3 text-nowrap font-bold">
@@ -53,7 +63,7 @@ import image3_section_2 from '@/assets/images/img3_section2.png'
   </div>
   <!-- Fin Bannière -->
 
-  <!-- Section 1 -->
+  <!-- Section Beneficts 1 -->
   <div class="px-4 md:px-10 lg:px-16 max-w-7xl mx-auto mt-24 mb-24 p-10 ">
 
     <div class="grid grid-cols-1 lg:grid-cols-6 gap-10 items-center">
@@ -63,7 +73,7 @@ import image3_section_2 from '@/assets/images/img3_section2.png'
         <h2 class="text-2xl md:text-5xl font-bold text-black tracking-tight ">Easy, Simple, Affordable</h2>
       </div>
 
-      <p class="lg:col-span-4 lg:w-2/3">
+      <p class="lg:col-span-4 lg:w-2/3 text-sm md:text-base">
         Our platform helps your business in managing expenses. These are some of the reasons why you should use our platform in managing business finances.
       </p>
 
@@ -104,12 +114,131 @@ import image3_section_2 from '@/assets/images/img3_section2.png'
     </div>
 
   </div>
-  <!-- Fin Section 1 -->
+  <!-- Fin Section Beneficts 1 -->
+
+  <!-- Section Beneficts 2 -->
+  <div class="px-4 md:px-10 lg:px-16 max-w-7xl mx-auto mt-24 mb-24 p-10 ">
+
+    <div class=" flex flex-col md:justify-center md:items-center">
+
+      <div class=" flex flex-col md:justify-center md:items-center space-y-4 mb-10 ">
+        <h4 class="block text-[#7C5CFC] font-medium"> WHY USE SPEND.IN </h4>
+        <h2 class="text-2xl md:text-5xl font-bold text-black tracking-tight ">Easy, Simple, Affordable</h2>
+      </div>
+
+      <p class="max-w-2xl md:text-center text-sm md:text-base ">
+        Our platform helps your business in managing expenses. These are some of the reasons why you should use our platform in managing business finances.
+      </p>
+
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 md:gap-14 mt-14">
+
+      <div class="flex flex-col justify-between space-y-8 lg:w-[80%]">
+
+        <div class="flex items-start space-x-4">
+          <img :src="icon1_section_3" alt="" class="h-8">
+          <div>
+            <h2 class="text-lg  md:text-xl font-semibold text-black tracking-tight mb-2.5 "> Automatic Invoice Payment </h2>
+            <p class="text-sm">
+              Automatic payments help you to arrange payments on a certain date without doing it manually again.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="flex items-start space-x-4">
+          <img :src="icon2_section_3" alt="" class="h-8">
+          <div>
+            <h2 class="text-lg  md:text-xl font-semibold text-black tracking-tight mb-2.5 "> Clear payment history </h2>
+            <p class="text-sm">
+              Clear payment history helps you to track your business expenses on specific dates.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="flex items-start space-x-4">
+          <img :src="icon3_section_3" alt="" class="h-8">
+          <div>
+            <h2 class="text-lg  md:text-xl font-semibold text-black tracking-tight mb-2.5 "> Use of multi-card payments </h2>
+            <p class="text-sm">
+              Have more than one debit or credit card? Don't worry, we support payments using more than one card.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <img :src="image1_section_3" alt="" class="h-full object-cover object-center">
+
+    </div>
+
+  </div>
+  <!-- Fin Section Beneficts 2 -->
+
+  <!-- Section How tu use -->
+  <div class="bg-app-principal py-24 ">
+    <div class="px-4 md:px-10 lg:px-16 max-w-7xl mx-auto" >
+
+      <div class=" flex flex-col md:justify-center md:items-center">
+
+      <div class=" flex flex-col md:justify-center md:items-center space-y-4 mb-10 ">
+        <h4 class="block text-[#7C5CFC] font-medium"> WHY IT WORKS </h4>
+        <h2 class="text-2xl md:text-4xl font-bold tracking-tight text-white">Few Easy Steps and Done</h2>
+      </div>
+
+      <p class="max-w-2xl md:text-center text-sm md:text-base ">
+        In just few easy step, you are all set to manage your business finances. <br> Manage all expenses with Spend.In all in one place.
+      </p>
+
+    </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10 md:gap-14 mt-10 w-2/3 md:w-full lg:w-2/3 mx-auto">
+
+        <div class="flex flex-col relative">
+          <img :src="image_step1" alt="" class="mb-4 object-center object-cover">
+          <span class="absolute top-0 left-0 size-12 flex items-center justify-center rounded-full  bg-app-secondary text-white font-bold -translate-y-6 -translate-x-6 ring-4 ring-app-principal "> 1 </span>
+          <h2 class="text-lg font-semibold tracking-tight text-white text-center"> Register your Spend.In account. </h2>
+        </div>
+
+        <div class="flex flex-col relative">
+          <img :src="image_step2" alt="" class="mb-4 object-center object-cover">
+          <span class="absolute top-0 left-0 size-12 flex items-center justify-center rounded-full  bg-app-secondary text-white font-bold -translate-y-6 -translate-x-6 ring-4 ring-app-principal "> 2 </span>
+          <h2 class="text-lg font-semibold tracking-tight text-white text-center"> Fill in the list of your business expenses. </h2>
+        </div>
+
+        <div class="flex flex-col relative">
+          <img :src="image_step3" alt="" class="mb-4 object-center object-cover">
+          <span class="absolute top-0 left-0 size-12 flex items-center justify-center rounded-full  bg-app-secondary text-white font-bold -translate-y-6 -translate-x-6 ring-4 ring-app-principal "> 3 </span>
+          <h2 class="text-lg font-semibold tracking-tight text-white text-center"> Done, let’s continue the work. </h2>
+        </div>
+
+      </div>
+
+      <div class="flex flex-col md:flex-row justify-center items-center md:space-x-6 space-y-12 md:space-y-0  w-full mt-12">
+
+        <div>
+          <a href="#" class=" text-sm bg-app-secondary w-full md:w-auto text-white rounded-full transition-all duration-500 ease-in-out px-6 py-3 text-nowrap font-bold">
+            Get Free Demo
+          </a>
+        </div>
+
+        <div class="">
+          <a href="#" class="text-white bg-app-gray text-sm font-bold rounded-full transition-all duration-500 ease-in-out px-6 py-3 text-nowrap">
+            See Pricing
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <!--  Fin Section How tu use -->
 
 </template>
 
 <style>
-.index {
-  z-index: -1
-}
 </style>
