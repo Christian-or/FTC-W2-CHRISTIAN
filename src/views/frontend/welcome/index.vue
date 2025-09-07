@@ -16,6 +16,18 @@ import icon3_section_3 from '@/assets/images/icon3_section3.png'
 import image_step1 from '@/assets/images/img_step1.png'
 import image_step2 from '@/assets/images/img_step2.png'
 import image_step3 from '@/assets/images/img_step3.png'
+
+// Image section 4
+import image1_section_4 from '@/assets/images/img1_section4.png'
+
+// Avatars
+import avatar1 from '@/assets/images/avatar1.png'
+import avatar2 from '@/assets/images/avatar2.png'
+import avatar3 from '@/assets/images/avatar3.png'
+
+
+// Images section 7
+import image1_section_7 from '@/assets/images/img1_section7.png'
 </script>
 
 <template>
@@ -64,7 +76,7 @@ import image_step3 from '@/assets/images/img_step3.png'
   <!-- Fin Bannière -->
 
   <!-- Section Beneficts 1 -->
-  <div class="px-4 md:px-10 lg:px-16 max-w-7xl mx-auto mt-24 mb-24 p-10 ">
+  <div class="px-4 md:px-10 lg:px-16 max-w-7xl mx-auto mt-16  mb-16 p-10" data-aos="fade-up">
 
     <div class="grid grid-cols-1 lg:grid-cols-6 gap-10 items-center">
 
@@ -117,7 +129,7 @@ import image_step3 from '@/assets/images/img_step3.png'
   <!-- Fin Section Beneficts 1 -->
 
   <!-- Section Beneficts 2 -->
-  <div class="px-4 md:px-10 lg:px-16 max-w-7xl mx-auto mt-24 mb-24 p-10 ">
+  <div class="px-4 md:px-10 lg:px-16 max-w-7xl mx-auto mt-16  mb-16 p-10" data-aos="fade-up">
 
     <div class=" flex flex-col md:justify-center md:items-center">
 
@@ -178,9 +190,9 @@ import image_step3 from '@/assets/images/img_step3.png'
   </div>
   <!-- Fin Section Beneficts 2 -->
 
-  <!-- Section How tu use -->
+  <!-- Section How tu use 1 -->
   <div class="bg-app-principal py-24 ">
-    <div class="px-4 md:px-10 lg:px-16 max-w-7xl mx-auto" >
+    <div class="px-4 md:px-10 lg:px-16 max-w-7xl mx-auto" data-aos="fade-up">
 
       <div class=" flex flex-col md:justify-center md:items-center">
 
@@ -236,7 +248,172 @@ import image_step3 from '@/assets/images/img_step3.png'
     </div>
 
   </div>
-  <!--  Fin Section How tu use -->
+  <!--  Fin Section How tu use 1 -->
+
+  <!-- Section How tu use 2 -->
+  <div class="bg-app-principal py-24">
+    <div class="px-4 md:px-10 lg:px-16 max-w-7xl mx-auto" data-aos="fade-up">
+
+      <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10 md:gap-14 mt-14">
+
+        <div class="flex flex-col justify-between space-y-8 lg:ml-20 order-1 lg:order-2  ">
+
+          <div class=" flex flex-col">
+
+            <div class=" flex flex-col space-y-4 mb-10 ">
+              <h4 class="block text-[#7C5CFC] font-medium"> WHY IT WORKS </h4>
+              <h2 class="text-2xl md:text-4xl font-bold tracking-tight text-white">Few Easy Steps and Done</h2>
+            </div>
+
+            <p class="max-w-2xl text-sm md:text-base ">
+              In just few easy step, you are all set to manage your business finances. Manage all expenses with Spend.In all in one place.
+            </p>
+
+          </div>
+
+          <div class="relative">
+
+            <div class="absolute top-0 left-0 w-1 flex h-full items-center justify-center rounded-full  bg-white text-white"> </div>
+
+            <div class="flex flex-col bg-app-gray p-6 rounded-lg">
+
+              <div class="flex items-center space-x-4 pb-5">
+                <span class="size-12 flex items-center justify-center rounded-full  bg-app-secondary text-white font-bold"> 1 </span>
+                <h2 class="text-lg font-medium tracking-tight text-white">Register your Spend.In account.</h2>
+              </div>
+
+             <div class="flex items-center space-x-4 pb-5">
+                <span class="size-12 flex items-center justify-center rounded-full  bg-app-secondary text-white font-bold "> 2 </span>
+                <h2 class="text-lg font-medium tracking-tight text-white">Fill in the list of your business expenses.</h2>
+              </div>
+
+             <div class="flex items-center space-x-4 pb-5">
+                <span class="size-12 flex items-center justify-center rounded-full  bg-white font-bold text-black "> 3 </span>
+                <h2 class="text-lg font-medium tracking-tight text-white">Done, let’s continue the work.</h2>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <img :src="image1_section_4" alt="" class="h-full object-cover object-center order-2 lg:order-1">
+
+      </div>
+
+    </div>
+  </div>
+  <!-- Fin Section How tu use 2 -->
+
+  <!-- Section testimonials -->
+  <div class="bg-app-principal py-24">
+    <div class="px-4 md:px-10 lg:px-16 max-w-7xl mx-auto mt-16  mb-16 p-10" data-aos="fade-up">
+
+      <div class=" flex flex-col md:justify-center md:items-center">
+
+        <div class=" flex flex-col md:justify-center md:items-center space-y-4 mb-10 ">
+          <h4 class="block text-[#7C5CFC] font-medium"> WHAT THEY SAY </h4>
+          <h2 class="text-2xl md:text-4xl font-bold tracking-tight text-white">Our User Kind Words</h2>
+        </div>
+
+        <p class="max-w-2xl md:text-center text-sm md:text-base ">
+          Here are some testimonials from our user after using Spend. <br> In to manage their business  expenses.
+        </p>
+
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-14 mt-10 items-start h-full">
+
+        <div class="flex flex-col justify-between h-full bg-app-gray p-10 shadow-lg rounded-lg">
+          <div class="flex flex-col space-y-2 pb-5">
+            <h2 class="text-base font-semibold text-white tracking-tight mb-2.5 "> It’s just incredible! </h2>
+            <p class="text-sm text-white font-normal opacity-80  ">
+              It’s just 1 month since I’m using Spend.In to manage my business expenses, but the result is very satisfying! My business finance now more neat than before, thanks to Spend.In!
+            </p>
+          </div>
+
+          <div class="flex items-center space-x-6 pt-5 border-t-[2px] border-app-grayText">
+            <img :src="avatar1" alt="" class="rounded-xl size-14">
+            <div class="flex flex-col space-y-2">
+              <h2 class="text-sm font-bold text-white tracking-tight"> Jimmy Bartney </h2>
+              <p class="text-xs text-app-grayText"> Product Manager at Picko Lab</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col justify-between h-full bg-app-gray p-10 shadow-lg rounded-lg">
+          <div class="flex flex-col space-y-2 pb-5">
+            <h2 class="text-base font-semibold text-white tracking-tight mb-2.5 "> Satisfied User Here! </h2>
+            <p class="text-sm text-white font-normal opacity-80  ">
+              Never thought that with Spend.In managing my business expenses is so easy! Been using this platform for 3 months and still counting!
+            </p>
+          </div>
+
+          <div class="flex items-center space-x-6 pt-5 border-t-[2px] border-app-grayText">
+            <img :src="avatar2" alt="" class="rounded-xl size-14">
+            <div class="flex flex-col space-y-2">
+              <h2 class="text-sm font-bold text-white tracking-tight"> Natasha Romanoff </h2>
+              <p class="text-xs text-app-grayText"> Black Widow </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col justify-between h-full bg-app-gray p-10 shadow-lg rounded-lg">
+          <div class="flex flex-col space-y-2 pb-5">
+            <h2 class="text-base font-semibold text-white tracking-tight mb-2.5 "> No doubt, Spend.In is the best! </h2>
+            <p class="text-sm text-white font-normal opacity-80  ">
+              “The best”! That’s what I want to say to this platform, didn’t know that there’s a platform to help you manage your business expenses like this! Very recommended to you who have a big business!
+            </p>
+          </div>
+
+          <div class="flex items-center space-x-6 pt-5 border-t-[2px] border-app-grayText">
+            <img :src="avatar3" alt="" class="rounded-xl size-14">
+            <div class="flex flex-col space-y-2">
+              <h2 class="text-sm font-bold text-white tracking-tight"> Moritika Kazuki </h2>
+              <p class="text-xs text-app-grayText"> Finance Manager at Mangan </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <!-- Fin Section testimonials -->
+
+  <!-- Section download now -->
+  <div class="bg-app-principal py-24">
+    <div class="px-4 md:px-10 lg:px-16 max-w-7xl mx-auto mt-16  mb-16 p-10" data-aos="fade-up">
+
+      <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10 md:gap-14 mt-10 items-center h-full">
+
+        <div class="flex flex-col">
+
+          <div class=" flex flex-col space-y-4 mb-10 ">
+            <h4 class="block text-[#7C5CFC] font-medium"> DOWNLOAD NOW! </h4>
+            <h2 class="text-2xl md:text-4xl font-bold tracking-tight text-white">Start Track Your Business Expenses Today</h2>
+          </div>
+
+          <p class="max-w-2xl text-sm md:text-base ">
+            Are you ready to make your business more organized? <br> Download Spend.In now!
+          </p>
+
+          <a href="#" class="mt-10 text-center lg:w-1/3 min-w-max text-sm bg-app-secondary md:w-auto text-white rounded-full transition-all duration-500 ease-in-out px-6 py-3 text-nowrap font-bold">
+            Get Free Demo
+          </a>
+
+        </div>
+
+        <img :src="image1_section_7" alt="">
+
+      </div>
+
+    </div>
+
+  </div>
+  <!-- Fin Section download now -->
 
 </template>
 
