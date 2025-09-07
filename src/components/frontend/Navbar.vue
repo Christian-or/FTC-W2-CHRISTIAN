@@ -17,7 +17,7 @@ function toggleMenu() {
 
 <template>
 
-  <div class=" border-b-[2px] border-app-gray fixed top-0 w-full !z-50 bg-app-principal">
+  <div class="border-b-[2px] border-app-gray fixed top-0 w-full !z-50 bg-app-principal">
     <div class="px-4 md:px-10 lg:px-16 max-w-7xl mx-auto py-2">
       <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center py-2 lg:py-4">
 

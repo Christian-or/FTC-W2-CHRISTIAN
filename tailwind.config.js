@@ -17,6 +17,10 @@ export default {
       fontFamily: {
         Jakarta: ['Plus Jakarta Sans']
       },
+      lineHeight: {
+        'extra-loose': '2.5',
+        '12': '3rem',
+      }
     },
   },
   plugins: [],
