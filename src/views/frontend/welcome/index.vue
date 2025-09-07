@@ -21,7 +21,7 @@ import image_step3 from '@/assets/images/img_step3.png'
 <template>
 
   <!-- Bannière -->
-  <div class="w-full bg-app-principal  bg-[url('@/assets/images/img_banniere.jpg')] bg-no-repeat bg-cover">
+  <div class="w-full bg-app-principal bg-no-repeat bg-cover">
     <div class="px-4 md:px-10 lg:px-16 max-w-7xl mx-auto py-2 h-full">
       <div class="md:px-10 mt-16 md:mt-24" data-aos="fade-up">
         <div class="flex flex-col justify-center items-center w-full space-y-10 z-10">
