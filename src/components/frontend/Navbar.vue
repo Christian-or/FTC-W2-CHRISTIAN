@@ -24,7 +24,7 @@ function toggleMenu() {
         <div class="flex items-center justify-between lg:pb-0">
 
           <router-link :to="{ name: 'frontend.welcome' }">
-            <img :src="logo" alt="App Logo" class="h-6 md:h-8 w-auto ">
+            <img :src="logo" alt="App Logo" class="h-6 md:h-8 w-auto object-contain object-center translate-x-2">
           </router-link>
 
           <div class="flex lg:hidden">
