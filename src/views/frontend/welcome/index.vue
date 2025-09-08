@@ -25,9 +25,33 @@ import avatar1 from '@/assets/images/avatar1.png'
 import avatar2 from '@/assets/images/avatar2.png'
 import avatar3 from '@/assets/images/avatar3.png'
 
+// Images section 5
+import image1_section_5 from '@/assets/images/img1_section5.png'
+import image2_section_5 from '@/assets/images/img1_section6.png'
+import icon_good from '@/assets/images/icon_good.png'
+import icon_bad from '@/assets/images/icon_bad.png'
 
 // Images section 7
 import image1_section_7 from '@/assets/images/img1_section7.png'
+import icon_free from '@/assets/images/icon_free.png'
+import icon_premium from '@/assets/images/icon_premium.png'
+import icon_ultimate from '@/assets/images/icon_ultimate.png'
+import design_pricong from '@/assets/images/design_pricing.png'
+
+import { ref } from "vue"
+
+const activeTab = ref("with") // valeur par défaut
+
+const setTab = (tab) => {
+  activeTab.value = tab
+}
+
+const isYearly = ref(false) // false = Monthly, true = Yearly
+
+const togglePlan = () => {
+  isYearly.value = !isYearly.value
+}
+
 </script>
 
 <template>
@@ -306,6 +330,127 @@ import image1_section_7 from '@/assets/images/img1_section7.png'
   </div>
   <!-- Fin Section How tu use 2 -->
 
+  <!-- Section Success story -->
+  <div class="px-4 md:px-10 lg:px-16 max-w-7xl mx-auto mt-16  mb-16 p-10" data-aos="fade-up">
+
+    <div class=" flex flex-col">
+
+      <div class=" flex flex-col space-y-4 lg:mb-10 ">
+        <h4 class="block text-[#7C5CFC] font-medium"> INCREASE PRODUCTIVITY </h4>
+        <h2 class="text-2xl md:text-4xl font-bold tracking-tight text-black lg:w-3/5"> Reduce Time in Doing Manual Work Managing Expenses </h2>
+      </div>
+
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 md:gap-14 mt-14">
+
+      <div class="flex flex-col justify-between lg:w-[80%]">
+
+        <div class="rounded-full flex justify-between items-center bg-[#F3F5F7] lg:w-[75%]">
+          <button
+            @click="setTab('with')"
+            :class="['text-sm font-bold rounded-full px-5 py-2.5 transition',
+              activeTab === 'with'
+              ? 'bg-app-secondary text-white shadow'
+              : 'bg-[#F3F5F7] text-app-grayText'
+            ]"
+          > With Spend.In
+          </button>
+          <button @click="setTab('without')"
+            :class="['text-sm font-bold rounded-full px-5 py-2.5 transition',
+               activeTab === 'without'
+                ? 'bg-app-secondary text-white shadow'
+                : 'bg-[#F3F5F7] text-app-grayText'
+            ]">
+            Without Spend.In
+          </button>
+        </div>
+
+        <div v-if="activeTab === 'with'" class="flex flex-col justify-between space-y-8 mt-10 lg:mt-0">
+
+          <h2 class="text-lg md:text-xl font-bold text-black tracking-tight mb-2.5 "> Track Business Expenses until its Milisecond </h2>
+
+          <div class="flex items-start space-x-4">
+            <img :src="icon_good" alt="" class="h-6 object-cover object-center">
+            <div>
+              <p class="text-sm">
+                Analyze your business cost easily with group transaction thorugh tagging feature.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <img :src="icon_good" alt="" class="h-6 object-cover object-center">
+            <div>
+              <p class="text-sm">
+                Add more than one card for payment. Integrated with more than 50+ payment method and support bulk payment.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <img :src="icon_good" alt="" class="h-6 object-cover object-center">
+            <div>
+              <p class="text-sm">
+                Arrange your business expenses by date, name, etc.,  with just one click.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div v-else class="flex flex-col justify-between space-y-8 mt-10 lg:mt-0">
+
+          <h2 class="text-lg md:text-xl font-bold text-black tracking-tight mb-2.5"> Taking too long to tidy up administrative files makes it unproductive </h2>
+
+          <div class="flex items-start space-x-4">
+            <img :src="icon_bad" alt="" class="h-6 object-cover object-center">
+            <div>
+              <p class="text-sm">
+                Complex recording process due to every administrative file in a different place.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <img :src="icon_bad" alt="" class="h-6 object-cover object-center">
+            <div>
+              <p class="text-sm">
+                Need more effort to pay manually one by one invoice because there is no payment accommodation.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <img :src="icon_bad" alt="" class="h-6 object-cover object-center">
+            <div>
+              <p class="text-sm">
+                Manual data arranging needs a long time because the different months/years are not in the same place.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="flex md:justify-end">
+        <img v-if="activeTab === 'with' " :src="image1_section_5" alt="" class="h-full lg:h-96 w-auto object-cover object-center" data-aos="fade-up">
+        <img v-else :src="image2_section_5" alt="" class="h-full lg:h-96 w-auto object-cover object-center" data-aos="fade-up">
+      </div>
+
+
+    </div>
+
+  </div>
+  <!-- Fin Section Success story -->
+
   <!-- Section testimonials -->
   <div class="bg-app-principal py-24">
     <div class="px-4 md:px-10 lg:px-16 max-w-7xl mx-auto mt-16  mb-16 p-10" data-aos="fade-up">
@@ -382,6 +527,215 @@ import image1_section_7 from '@/assets/images/img1_section7.png'
 
   </div>
   <!-- Fin Section testimonials -->
+
+  <!-- Section get started -->
+  <div class="px-4 md:px-10 lg:px-16 max-w-7xl mx-auto mt-16  mb-16 p-10" data-aos="fade-up">
+
+    <div class=" flex flex-col md:justify-center md:items-center">
+
+      <div class=" flex flex-col md:justify-center md:items-center space-y-4 mb-5 md:mb-10 ">
+        <h2 class="text-2xl md:text-4xl font-bold tracking-tight text-black">Ready to Get Started?</h2>
+      </div>
+
+      <p class="max-w-2xl md:text-center text-sm md:text-base mb-5 md:mb-10">
+        Choose a plan that suits your business needs
+      </p>
+
+    <div class="relative flex flex-col items-center space-y-2">
+
+       <!-- Toggle -->
+       <div class="flex items-center space-x-4">
+
+          <span :class="[ 'text-sm font-semibold transition', !isYearly ? 'text-gray-900' : 'text-gray-400']"> Monthly </span>
+
+          <!-- Switch -->
+          <div  @click="togglePlan"  class="relative w-14 h-7 flex items-center bg-app-secondary rounded-full cursor-pointer p-1 transition">
+            <div :class="['w-6 h-6 bg-white rounded-full shadow-md transform transition', isYearly ? 'translate-x-6' : 'translate-x-0']"></div>
+          </div>
+
+          <span :class="['text-sm font-semibold transition', isYearly ? 'text-gray-900' : 'text-gray-400']"> Yearly </span>
+
+          <img :src="design_pricong" alt=""  class="absolute top-0 right-0 md:translate-x-4 md:py-4 object-cover -translate-x-10 object-center">
+       </div>
+
+
+      <!-- Discount badge -->
+      <div class="flex items-center pt-3 space-x-2">
+        <span class="bg-purple-100 text-purple-700 text-xs font-semibold px-3 py-1 rounded-full">
+          Save 65%
+        </span>
+        <span class="text-sm text-gray-500">  </span>
+      </div>
+
+    </div>
+
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-10 mt-10 items-start h-full">
+
+      <div class="flex flex-col justify-between h-full bg-[#F3F5F7] p-8 rounded-md space-y-8">
+
+       <div class="flex flex-col space-y-2">
+         <div class="flex justify-start space-x-3 items-center">
+           <img :src="icon_free" alt="" class="h-6">
+           <span class="block text-black font-bold text-2xl"> Free </span>
+         </div>
+         <p class="text-sm">Perfect plan to get started</p>
+       </div>
+
+        <div class="flex space-x-2 items-center">
+          <span class="font-bold text-4xl text-black">$0</span>
+          <span>/month</span>
+        </div>
+
+        <p class="text-sm"> A free plan grants you access to some cool features of Spend.In. </p>
+
+        <div class="flex items-center space-x-2">
+          <img :src="icon_good" alt="" class="h-4 object-cover object-center">
+          <span class="text-black font-medium"> Sync accross device </span>
+        </div>
+
+        <div class="flex items-center space-x-2">
+          <img :src="icon_good" alt="" class="h-4 object-cover object-center">
+          <span class="text-black font-medium"> 5 workspace </span>
+        </div>
+
+        <div class="flex items-center space-x-2">
+          <img :src="icon_good" alt="" class="h-4 object-cover object-center">
+          <span class="text-black font-medium"> Collaborate with 5 user </span>
+        </div>
+
+        <div class="flex items-center space-x-2">
+          <img :src="icon_bad" alt="" class="h-4 object-cover object-center">
+          <span class="text-black font-medium"> Sharing permission </span>
+        </div>
+
+        <div class="flex items-center space-x-2">
+          <img :src="icon_bad" alt="" class="h-4 object-cover object-center">
+          <span class="text-black font-medium"> Admin tools </span>
+        </div>
+
+        <div class="flex items-center space-x-2">
+          <img :src="icon_bad" alt="" class="h-4 object-cover object-center">
+          <span class="text-black font-medium"> 100+ integrations </span>
+        </div>
+
+        <a href="#" class=" text-sm text-center bg-app-secondary w-full md:w-auto text-white rounded-full transition-all duration-500 ease-in-out px-6 py-3 text-nowrap font-bold">
+          Get Free Demo
+        </a>
+
+      </div>
+
+      <div class="flex flex-col justify-between h-full bg-[#F3F5F7] p-8 rounded-md space-y-8">
+
+       <div class="flex flex-col space-y-2">
+         <div class="flex justify-start space-x-3 items-center">
+           <img :src="icon_premium" alt="" class="h-6">
+           <span class="block text-black font-bold text-2xl"> Pro </span>
+         </div>
+         <p class="text-sm">Perfect plan for professionals!</p>
+       </div>
+
+        <div class="flex space-x-2 items-center">
+          <span class="font-bold text-4xl text-black">$12</span>
+          <span>/month</span>
+        </div>
+
+        <p class="text-sm"> For professional only! Start arranging your expenses with our best templates. </p>
+
+        <div class="flex items-center space-x-2">
+          <img :src="icon_good" alt="" class="h-4 object-cover object-center">
+          <span class="text-black font-medium"> Everything in Free Plan </span>
+        </div>
+
+        <div class="flex items-center space-x-2">
+          <img :src="icon_good" alt="" class="h-4 object-cover object-center">
+          <span class="text-black font-medium"> Unlimited workspace </span>
+        </div>
+
+        <div class="flex items-center space-x-2">
+          <img :src="icon_good" alt="" class="h-4 object-cover object-center">
+          <span class="text-black font-medium"> Collaborative workspace </span>
+        </div>
+
+        <div class="flex items-center space-x-2">
+          <img :src="icon_good" alt="" class="h-4 object-cover object-center">
+          <span class="text-black font-medium"> Sharing permission </span>
+        </div>
+
+        <div class="flex items-center space-x-2">
+          <img :src="icon_good" alt="" class="h-4 object-cover object-center">
+          <span class="text-black font-medium"> Admin tools </span>
+        </div>
+
+        <div class="flex items-center space-x-2">
+          <img :src="icon_good" alt="" class="h-4 object-cover object-center">
+          <span class="text-black font-medium"> 100+ integrations </span>
+        </div>
+
+        <a href="#" class=" text-sm text-center bg-app-secondary w-full md:w-auto text-white rounded-full transition-all duration-500 ease-in-out px-6 py-3 text-nowrap font-bold">
+          Get Free Demo
+        </a>
+
+      </div>
+
+      <div class="flex flex-col justify-between h-full bg-[#F3F5F7] p-8 rounded-md space-y-8">
+
+       <div class="flex flex-col space-y-2">
+         <div class="flex justify-start space-x-3 items-center">
+           <img :src="icon_ultimate" alt="" class="h-6">
+           <span class="block text-black font-bold text-2xl"> Ultimate </span>
+         </div>
+         <p class="text-sm">Best suits for great company!</p>
+       </div>
+
+        <div class="flex space-x-2 items-center">
+          <span class="font-bold text-4xl text-black">$33</span>
+          <span>/month</span>
+        </div>
+
+        <p class="text-sm"> If you a finance manager at big  company, this plan is a perfect match. </p>
+
+        <div class="flex items-center space-x-2">
+          <img :src="icon_good" alt="" class="h-4 object-cover object-center">
+          <span class="text-black font-medium"> Everything in Pro Plan </span>
+        </div>
+
+        <div class="flex items-center space-x-2">
+          <img :src="icon_good" alt="" class="h-4 object-cover object-center">
+          <span class="text-black font-medium"> Daily performance reports </span>
+        </div>
+
+        <div class="flex items-center space-x-2">
+          <img :src="icon_good" alt="" class="h-4 object-cover object-center">
+          <span class="text-black font-medium"> Dedicated assistant </span>
+        </div>
+
+        <div class="flex items-center space-x-2">
+          <img :src="icon_good" alt="" class="h-4 object-cover object-center">
+          <span class="text-black font-medium"> Artificial intelligence </span>
+        </div>
+
+        <div class="flex items-center space-x-2">
+          <img :src="icon_good" alt="" class="h-4 object-cover object-center">
+          <span class="text-black font-medium"> Marketing tools & automations </span>
+        </div>
+
+        <div class="flex items-center space-x-2">
+          <img :src="icon_good" alt="" class="h-4 object-cover object-center">
+          <span class="text-black font-medium"> Advanced security </span>
+        </div>
+
+        <a href="#" class=" text-sm text-center bg-app-secondary w-full md:w-auto text-white rounded-full transition-all duration-500 ease-in-out px-6 py-3 text-nowrap font-bold">
+          Get Free Demo
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+  <!-- Fin section started -->
 
   <!-- Section download now -->
   <div class="bg-app-principal py-24">
