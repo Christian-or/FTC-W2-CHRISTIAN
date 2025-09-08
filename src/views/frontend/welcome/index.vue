@@ -39,9 +39,9 @@ import icon_ultimate from '@/assets/images/icon_ultimate.png'
 import design_pricong from '@/assets/images/design_pricing.png'
 
 import { ref } from "vue"
+import Navbar from '@/components/frontend/Navbar.vue'
 const activeTab = ref("with") // valeur par défaut
 const isYearly = ref(false) // false = Monthly, true = Yearly
-
 // Fonction de tabulation
 const setTab = (tab) => {
   activeTab.value = tab
