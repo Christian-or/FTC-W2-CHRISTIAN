@@ -39,14 +39,14 @@ import icon_ultimate from '@/assets/images/icon_ultimate.png'
 import design_pricong from '@/assets/images/design_pricing.png'
 
 import { ref } from "vue"
-
 const activeTab = ref("with") // valeur par défaut
+const isYearly = ref(false) // false = Monthly, true = Yearly
 
+// Fonction de tabulation
 const setTab = (tab) => {
   activeTab.value = tab
 }
 
-const isYearly = ref(false) // false = Monthly, true = Yearly
 
 const togglePlan = () => {
   isYearly.value = !isYearly.value
@@ -57,34 +57,33 @@ const togglePlan = () => {
 <template>
 
   <!-- Bannière -->
-  <div class="w-full bg-app-principal bg-no-repeat bg-cover">
+  <div class="relative w-full bg-app-principal bg-no-repeat bg-cover overflow-hidden">
+    <div class="absolute bottom-0 left-0 size-[800px] p-24 rounded-full border-[100px] border-app-gray -translate-x-[400px] translate-y-[400px]"></div>
+    <div class="absolute top-0 right-0 size-[800px] p-24 rounded-full border-[100px] border-app-gray translate-x-[400px] -translate-y-[400px]"></div>
     <div class="px-4 md:px-10 lg:px-16 max-w-7xl mx-auto py-2 h-full">
       <div class="md:px-10 mt-16 md:mt-24" data-aos="fade-up">
-        <div class="flex flex-col justify-center items-center w-full space-y-10 z-10">
+        <div class="flex flex-col md:justify-center md:items-center w-full space-y-10 z-10">
 
-          <h1 class="text-white text-4xl md:text-5xl lg:text-7xl font-bold text-center lg:max-w-6xl">
+          <h1 class="text-white text-4xl md:text-5xl lg:text-7xl font-bold md:text-center lg:max-w-6xl">
             All your business <br>
             expenses in one place.
           </h1>
 
-          <p class="text-base md:text-xl text-center md:max-w-4xl text-app-grayText">
+          <p class="text-base md:text-xl md:text-center md:max-w-4xl text-app-grayText">
             Your one-stop finance empower platform. <br>
             Manage all your business expenses with our supafast app.
           </p>
 
           <div class="flex flex-col md:flex-row justify-center items-center md:space-x-6 space-y-12 md:space-y-0  w-full">
 
-            <div>
-              <a href="#" class=" text-sm bg-app-secondary w-full md:w-auto text-white rounded-full transition-all duration-500 ease-in-out px-6 py-3 text-nowrap font-bold">
-                Get Free Demo
-              </a>
-            </div>
+            <a href="#" class=" text-sm text-center bg-app-secondary w-full md:w-auto text-white rounded-full transition-all duration-500 ease-in-out px-6 py-3 text-nowrap font-bold">
+              Get a Free Demo
+            </a>
 
-            <div class="">
-              <a href="#" class="text-white bg-app-gray text-sm font-bold rounded-full transition-all duration-500 ease-in-out px-6 py-3 text-nowrap">
-               See Pricing
-              </a>
-            </div>
+            <a href="#" class="text-white text-center bg-app-gray text-sm font-bold rounded-full transition-all duration-500 ease-in-out px-6 py-3 text-nowrap">
+             See Pricing
+            </a>
+
 
           </div>
 
@@ -585,7 +584,8 @@ const togglePlan = () => {
 
         <div class="flex space-x-2 items-center">
           <span class="font-bold text-4xl text-black">$0</span>
-          <span>/month</span>
+          <span v-if="!isYearly">/month</span>
+          <span v-else>/Year</span>
         </div>
 
         <p class="text-sm"> A free plan grants you access to some cool features of Spend.In. </p>
@@ -638,7 +638,8 @@ const togglePlan = () => {
 
         <div class="flex space-x-2 items-center">
           <span class="font-bold text-4xl text-black">$12</span>
-          <span>/month</span>
+          <span v-if="!isYearly">/month</span>
+          <span v-else>/Year</span>
         </div>
 
         <p class="text-sm"> For professional only! Start arranging your expenses with our best templates. </p>
@@ -691,7 +692,8 @@ const togglePlan = () => {
 
         <div class="flex space-x-2 items-center">
           <span class="font-bold text-4xl text-black">$33</span>
-          <span>/month</span>
+          <span v-if="!isYearly">/month</span>
+          <span v-else>/Year</span>
         </div>
 
         <p class="text-sm"> If you a finance manager at big  company, this plan is a perfect match. </p>

@@ -55,8 +55,8 @@ function toggleMenu() {
 
               <div>
                 <router-link
-                  :to=" { name: 'frontend.pricing' } "
-                  :class=" route.name === 'frontend.pricing' ? 'font-semibold' : '' "
+                  :to="{ name: 'frontend.welcome' }"
+                  :class=" route.name === 'frontend.welcome' ? 'font-semibold' : '' "
                   class=" text-white text-sm hover:font-semibold transition-all duration-500 ease-in-out p-2.5 text-nowrap"
                 >
                   Beneficts
@@ -65,8 +65,8 @@ function toggleMenu() {
 
               <div>
                 <router-link
-                  :to="{ name: 'frontend.about' }"
-                  :class=" route.name === 'frontend.about' ? 'font-semibold' : '' "
+                  :to="{ name: 'frontend.welcome' }"
+                  :class=" route.name === 'frontend.welcome' ? 'font-semibold' : '' "
                   class=" text-sm hover:font-semibold transition-all duration-500 ease-in-out p-2.5 text-nowrap"
                 >
                   How it Works
@@ -75,8 +75,8 @@ function toggleMenu() {
 
               <div>
                 <router-link
-                  :to="{ name: 'frontend.about' }"
-                  :class=" route.name === 'frontend.about' ? 'font-semibold' : '' "
+                  :to="{ name: 'frontend.welcome' }"
+                  :class=" route.name === 'frontend.welcome' ? 'font-semibold' : '' "
                   class=" text-sm hover:font-semibold transition-all duration-500 ease-in-out p-2.5 text-nowrap"
                 >
                   Pricing
@@ -85,8 +85,8 @@ function toggleMenu() {
 
               <div>
                 <router-link
-                  :to="{ name: 'frontend.about' }"
-                  :class=" route.name === 'frontend.about' ? 'font-semibold' : '' "
+                  :to="{ name: 'frontend.welcome' }"
+                  :class=" route.name === 'frontend.welcome' ? 'font-semibold' : '' "
                   class=" flex space-x-2 items-center text-sm hover:font-semibold transition-all duration-500 ease-in-out p-2.5 text-nowrap"
                 >
                   <span>Company</span>
@@ -99,8 +99,8 @@ function toggleMenu() {
             <div class="flex flex-col lg:flex-row lg:items-center lg:justify-end space-y-4 lg:space-y-0 lg:space-x-4">
               <div>
                 <router-link
-                    :to=" { name: 'frontend.pricing' } "
-                    :class=" route.name === 'frontend.pricing' ? 'font-semibold' : '' "
+                    :to="{ name: 'frontend.welcome' }"
+                    :class=" route.name === 'frontend.welcome' ? 'font-semibold' : '' "
                     class=" text-white text-sm hover:font-semibold transition-all duration-500 ease-in-out p-2.5 text-nowrap"
                 >
                   Login
@@ -108,7 +108,7 @@ function toggleMenu() {
               </div>
 
               <div>
-                <a class=" text-sm hover:font-semibold transition-all duration-500 ease-in-out p-3 text-nowrap bg-app-secondary rounded-full font-semibold">
+                <a href="#" class=" text-sm hover:font-semibold transition-all duration-500 ease-in-out p-3 text-nowrap bg-app-secondary rounded-full font-semibold">
                   Get Demo
                 </a>
               </div>
